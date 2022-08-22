@@ -1,11 +1,12 @@
 #ifndef __UVUNTU_OBJECT__
 #define __UVUNTU_OBJECT__
 
+#include "../driver/detactor/detactor.hpp"
+
 class Object {
-private:
-	int test;
 public:
-	int execute(void);
+	virtual int execute(Detactor* data) = 0;
+	virtual int show(void)              = 0;
 };
 
 #endif

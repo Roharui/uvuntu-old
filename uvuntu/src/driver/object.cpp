@@ -1,18 +1,13 @@
 
+#include <raylib.h>
 #include <iostream>
+#include <vector>
+
+#include "detactor/detactor.hpp"
 
 class Object {
-private:
-	int test = 0;
 public:
-	int execute(void);
-	Object(void);
+	virtual int execute(Detactor * data)  = 0;
+	virtual int show(void)                = 0;
 };
 
-int Object::execute(void) {
-	std::cout << "Hello!" << std::endl;
-
-	return this->test;
-}
-
-Object::Object() { }

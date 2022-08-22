@@ -4,13 +4,15 @@
 
 #include "src/driver/driver.hpp"
 
-int main() {
+int main()
+{
 	std::cout << "Application running..." << std::endl;
 
+	Driver *driver = new Driver;
 
-	Driver driver;
+	driver->init();
 
-	driver.init();
+	int result = driver->run();
 
-	return driver.run();
+	return result;
 }
